@@ -26,7 +26,7 @@ export default {
       axios
         .get(
           "https://developers.zomato.com/api/v2.1/location_details?entity_id=5200&entity_type=city",
-          { headers: { "user-key": "API KEY API KEY API KEY" } }
+          { headers: { "user-key": process.env.VUE_APP_ZOMATO } }
         )
         .then((response) => {
           this.index = response.data;
