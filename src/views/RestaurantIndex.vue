@@ -1,7 +1,15 @@
+
 <template>
   <div class="home">
     <h1>{{ message }}</h1>
-    <h3>{{ index }}</h3>
+    <div v-for='restaurant in restaurants["best_rated_restaurant"]'>
+      <!-- image = {{restaurant["restaurant"]["photos_url"]}} -->
+      <img v-bind:src='restaurant["restaurant"]["photos_url"]'>
+      {{restaurant["restaurant"]["name"]}}
+      {{restaurant["restaurant"]["timings"]}}
+    </div>
+    <h3>{{restaurants["best_rated_restaurant"][1]["restaurant"]}}</h3>
+  
   </div>
 </template>
 
@@ -15,7 +23,7 @@ export default {
   data: function () {
     return {
       message: "Restaurants Near You",
-      index: [],
+      restaurants: [],
     };
   },
   created: function () {
@@ -25,11 +33,11 @@ export default {
     zomatoIndex: function () {
       axios
         .get(
-          "https://developers.zomato.com/api/v2.1/location_details?entity_id=5200&entity_type=city",
+          "https://developers.zomato.com/api/v2.1/location_details?entity_id=652&entity_type=city",
           { headers: { "user-key": process.env.VUE_APP_ZOMATO } }
         )
         .then((response) => {
-          this.index = response.data;
+          this.restaurants = response.data;
         });
     },
   },
