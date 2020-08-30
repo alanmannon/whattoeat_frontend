@@ -6,7 +6,7 @@ import Login from '../views/Login.vue';
 import Logout from '../views/Logout.vue';
 import Signup from '../views/Signup.vue';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
