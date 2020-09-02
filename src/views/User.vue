@@ -37,9 +37,13 @@ export default {
       });
     },
     userInfo: function () {
-      axios.get(`/api/user/${this.$route.params.id}`).then((response) => {
+      var params = {
+        jwt: localStorage.getItem("jwt"),
+      };
+      axios.get("/api/user/", params).then((response) => {
         console.log(response.data);
         this.userinfo = response.data;
+        console.log(response.data);
       });
     },
   },

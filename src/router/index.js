@@ -5,7 +5,8 @@ import RestaurantIndex from '../views/RestaurantIndex.vue';
 import Login from '../views/Login.vue';
 import Logout from '../views/Logout.vue';
 import Signup from '../views/Signup.vue';
-
+import Usergroup from '../views/Usergroup.vue';
+import RestaurantShow from '../views/RestaurantShow.vue';
 Vue.use(VueRouter);
 
 const routes = [
@@ -41,6 +42,16 @@ const routes = [
     path: '/signup',
     name: 'signup',
     component: Signup
+  },
+  {
+    path: '/usergroup',
+    name: 'usergroup',
+    component: Usergroup
+  },
+  {
+    path: '/show',
+    name: 'Restaurant Show',
+    component: RestaurantShow,
   }
 ];
 
