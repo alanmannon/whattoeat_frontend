@@ -1,6 +1,12 @@
 <template>
   <div class="home">
-     <h1>{{ restaurant }}</h1>
+     <h1>{{ restaurant.name }}</h1>
+     <h1>{{ restaurant.location["address"] }}</h1>
+     <h1>{{ restaurant.cuisines }}</h1>
+     <h1>{{ restaurant.phone_numbers }}</h1>
+     <h1>{{ restaurant.timings }}</h1>
+     <h1>Price Range: {{ price_range }}</h1>
+  <button v-on:click="addRestaurant()">Add restaurant</button>
   </div>
 </template>
 
@@ -14,6 +20,9 @@ export default {
     return {
       // message: `${this.$route.query.restid}`,
       restaurant: [],
+      price_range: [],
+      currency: "$",
+      response: [],
     };
   },
   created: function () {
@@ -29,7 +38,22 @@ export default {
         )
         .then((response) => {
           this.restaurant = response.data;
+          var tempPrice = response.data;
+          this.price_range = this.currency.repeat(
+            parseInt(tempPrice.price_range)
+          );
         });
+    },
+    addRestaurant: function () {
+      var params = {
+        restaurant_id: `${this.$route.query.restid}`,
+        user_id: localStorage.getItem("jwt"),
+        group_id: "1",
+      };
+      axios.post("/api/usergroup", params).then((response) => {
+        this.response = response.data;
+      });
+      console.log(params);
     },
   },
 };
