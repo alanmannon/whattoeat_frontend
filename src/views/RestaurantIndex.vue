@@ -1,14 +1,20 @@
 
 <template>
-  <div class="home">
+  <div class="container">
     <h1>{{ message }}</h1>
     <div v-for='restaurant in restaurants["best_rated_restaurant"]'>
-      <!-- image = {{restaurant["restaurant"]["photos_url"]}} -->
-      <!-- <img v-bind:src='restaurant["restaurant"]["photos_url"]'> -->
-      <h2><a v-bind:href='`/show?restid=${restaurant["restaurant"]["id"]}`'>{{restaurant["restaurant"]["name"]}}</a></h2>
-      {{restaurant["restaurant"]["timings"]}}
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="">
+        <div class="card-body">
+          <h5 class="card-title">{{restaurant["restaurant"]["name"]}}</h5>
+          <p class="card-text">{{ restaurant["restaurant"]["cuisines"] }}</p>
+          <a v-bind:href='`/show?restid=${restaurant["restaurant"]["id"]}`' class="btn btn-primary">More Info</a>
+        </div>
+</div>
     </div>
     <h3>{{restaurants["best_rated_restaurant"][1]["restaurant"]}}</h3>
+ 
+
   
   </div>
 </template>
@@ -22,7 +28,7 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      message: "Restaurants Near You",
+      message: "Top Restaurants Near You",
       restaurants: [],
       currentuser: [],
     };

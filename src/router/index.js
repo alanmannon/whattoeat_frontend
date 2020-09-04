@@ -7,6 +7,8 @@ import Logout from '../views/Logout.vue';
 import Signup from '../views/Signup.vue';
 import Usergroup from '../views/Usergroup.vue';
 import RestaurantShow from '../views/RestaurantShow.vue';
+import RestaurantRoll from '../views/RestaurantRoll.vue';
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -44,15 +46,15 @@ const routes = [
     component: Signup
   },
   {
-    path: '/usergroup',
-    name: 'usergroup',
-    component: Usergroup
+    path: '/roll',
+    name: 'RestaurantRoll',
+    component: RestaurantRoll
   },
   {
     path: '/show',
     name: 'Restaurant Show',
     component: RestaurantShow,
-  }
+  },
 ];
 
 const router = new VueRouter({
