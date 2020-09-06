@@ -1,13 +1,27 @@
 <template>
-  <div class="home">
-     <h1>{{ restaurant.name }}</h1>
-     <h1>{{ restaurant.location["address"] }}</h1>
-     <h1>{{ restaurant.cuisines }}</h1>
-     <h1>{{ restaurant.phone_numbers }}</h1>
-     <h1>{{ restaurant.timings }}</h1>
-     <h1>Price Range: {{ price_range }}</h1>
-  <button v-on:click="addRestaurant()">Add restaurant</button>
-  </div>
+  <div class="container">
+    <div class="home">
+      <h1>{{ restaurant.name }}</h1>
+      <h1>{{ restaurant.location["address"] }}</h1>
+      <h1>{{ restaurant.cuisines }}</h1>
+      <h1>{{ restaurant.phone_numbers }}</h1>
+      <h1>{{ restaurant.timings }}</h1>
+      <h1>Price Range: {{ price_range }}</h1>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Group to Add
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Favorites</a>
+          <a class="dropdown-item" href="#">Quick Bites</a>
+          <a class="dropdown-item" href="#">Special Occasion</a>
+          <a class="dropdown-item" href="#">Want to Try</a>
+        </div>
+      </div>
+      
+      <button v-on:click="addRestaurant()">Add restaurant</button>
+    </div>
+  </div>  
 </template>
 
 <style>
@@ -23,6 +37,7 @@ export default {
       price_range: [],
       currency: "$",
       response: [],
+      group_id: "",
     };
   },
   created: function () {
