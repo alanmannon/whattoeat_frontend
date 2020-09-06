@@ -10,7 +10,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/user">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/roll">
         <div class="sidebar-brand-icon" >
           <i class="fas fa-utensils"></i>
         </div>
@@ -42,26 +42,26 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="">
+        <a class="nav-link" href="/groups/1">
           <i class="fas fa-fw fa-chart-area"></i>
           <span>Favorites</span></a>
       </li>
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link" href="">
+        <a class="nav-link" href="/groups/2">
           <i class="fas fa-fw fa-table"></i>
           <span>Quick Bites</span></a>
       </li>
       
       <li class="nav-item">
-        <a class="nav-link" href="">
+        <a class="nav-link" href="/groups/3">
           <i class="fas fa-fw fa-table"></i>
           <span>Special Occasion</span></a>
       </li>
       
       <li class="nav-item">
-        <a class="nav-link" href="">
+        <a class="nav-link" href="/groups/4">
           <i class="fas fa-fw fa-table"></i>
           <span>Want to Try</span></a>
       </li>

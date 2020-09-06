@@ -1,18 +1,20 @@
 
 <template>
-  <div class="container">
-    <h1>{{ message }}</h1>
-    <div v-for='restaurant in restaurants["best_rated_restaurant"]'>
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="">
-        <div class="card-body">
-          <h5 class="card-title">{{restaurant["restaurant"]["name"]}}</h5>
-          <p class="card-text">{{ restaurant["restaurant"]["cuisines"] }}</p>
-          <a v-bind:href='`/show?restid=${restaurant["restaurant"]["id"]}`' class="btn btn-primary">More Info</a>
+  <div class="container" align="center">
+    <h1> {{ message }} </h1>
+    <div class="card-group" align="center">
+      <div v-for='restaurant in restaurants["best_rated_restaurant"]'>
+        <div class="card h-100" style="width: 20rem;">
+          <img class="card-img-top" src="">
+          <div class="card-body">
+            <h5 class="card-title">{{restaurant["restaurant"]["name"]}}</h5>
+            <p class="card-text">{{ restaurant["restaurant"]["cuisines"] }}</p>
+            <a v-bind:href='`/show?restid=${restaurant["restaurant"]["id"]}`' class="btn btn-primary">More Info</a>
+          </div>
         </div>
-</div>
+      </div>
     </div>
-    <h3>{{restaurants["best_rated_restaurant"][1]["restaurant"]}}</h3>
+  
  
 
   

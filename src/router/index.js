@@ -8,6 +8,7 @@ import Signup from '../views/Signup.vue';
 import Usergroup from '../views/Usergroup.vue';
 import RestaurantShow from '../views/RestaurantShow.vue';
 import RestaurantRoll from '../views/RestaurantRoll.vue';
+import GroupShow from '../views/GroupShow.vue';
 
 Vue.use(VueRouter);
 
@@ -54,6 +55,11 @@ const routes = [
     path: '/show',
     name: 'Restaurant Show',
     component: RestaurantShow,
+  },
+  {
+    path: '/group',
+    name: 'Group Show',
+    component: GroupShow,
   },
 ];
 

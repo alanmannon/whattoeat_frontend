@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" align="center">
     <div class="home">
       <h1>{{ restaurant.name }}</h1>
       <h1>{{ restaurant.location["address"] }}</h1>
@@ -7,21 +7,16 @@
       <h1>{{ restaurant.phone_numbers }}</h1>
       <h1>{{ restaurant.timings }}</h1>
       <h1>Price Range: {{ price_range }}</h1>
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Group to Add
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Favorites</a>
-          <a class="dropdown-item" href="#">Quick Bites</a>
-          <a class="dropdown-item" href="#">Special Occasion</a>
-          <a class="dropdown-item" href="#">Want to Try</a>
-        </div>
+        <select v-model="selected">
+          <option v-for="group in group_ids" v-bind:value="group.value">
+            {{ group.text }}
+          </option>
+        </select>
       </div>
-      
-      <button v-on:click="addRestaurant()">Add restaurant</button>
+      <br>
+      <button type="button" class="btn btn-primary" v-on:click="addRestaurant()">Add restaurant</button>
     </div>
-  </div>  
+ 
 </template>
 
 <style>
@@ -37,11 +32,18 @@ export default {
       price_range: [],
       currency: "$",
       response: [],
-      group_id: "",
+      group_ids: [
+        { text: "Favorites", value: "1" },
+        { text: "Quick Bites", value: "2" },
+        { text: "Special Occasion", value: "3" },
+        { text: "Want to Try", value: "4" },
+      ],
+      selected: "1",
     };
   },
   created: function () {
     this.zomatoShow();
+    this.getGroupID();
   },
   methods: {
     zomatoShow: function () {
@@ -63,12 +65,18 @@ export default {
       var params = {
         restaurant_id: `${this.$route.query.restid}`,
         user_id: localStorage.getItem("jwt"),
-        group_id: "1",
+        group_id: this.selected,
       };
       axios.post("/api/usergroup", params).then((response) => {
         this.response = response.data;
       });
       console.log(params);
+    },
+    getGroupID: function () {
+      axios.get("/api/groups").then((response) => {
+        this.response = this.group_ids;
+        console.log(this.group_ids);
+      });
     },
   },
 };
