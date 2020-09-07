@@ -9,6 +9,7 @@ import Usergroup from '../views/Usergroup.vue';
 import RestaurantShow from '../views/RestaurantShow.vue';
 import RestaurantRoll from '../views/RestaurantRoll.vue';
 import GroupShow from '../views/GroupShow.vue';
+import SearchResult from '../views/SearchResult.vue';
 
 Vue.use(VueRouter);
 
@@ -60,6 +61,11 @@ const routes = [
     path: '/group',
     name: 'Group Show',
     component: GroupShow,
+  },
+  {
+    path: '/results',
+    name: 'Search Results',
+    component: SearchResult,
   },
 ];
 
