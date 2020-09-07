@@ -11,17 +11,17 @@
         <button type="button" class="btn btn-primary" v-on:click="getUserGroup()" data-toggle="modal" data-target="#exampleModal"> ROLL </button>
     </div>
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModal" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModal" aria-hidden="true" >
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">{{ restaurant.name }}</h5>
+          <div class="modal-header text-center" >
+            <h5 class="modal-title w-100" id="exampleModalLabel" >{{ restaurant.name }}</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body">
-            {{ restaurant.cuisines}}
+          <div class="modal-body" align="center">
+            {{ restaurant.cuisines}} 
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
