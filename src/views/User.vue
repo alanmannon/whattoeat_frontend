@@ -12,7 +12,7 @@
             <div class="card-body">
               <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
-                  <div class="text-md font-weight-bold text-warning text-uppercase mb-1">{{ group.name }}</div>
+                  <a class="text-md font-weight-bold text-warning text-uppercase mb-1" v-bind:href='`/group?group_id=`'>{{ group.name }}</a>
                   <div class="h5 mb-0 font-weight-bold text-gray-800">{{ group.name }} Restaurants</div>
                 </div>
               </div>

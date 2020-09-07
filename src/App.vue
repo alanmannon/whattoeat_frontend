@@ -42,26 +42,26 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="/groups/1">
+        <a class="nav-link" href="/group?group_id=1">
           <i class="fas fa-fw fa-chart-area"></i>
           <span>Favorites</span></a>
       </li>
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link" href="/groups/2">
+        <a class="nav-link" href="/group?group_id=2">
           <i class="fas fa-fw fa-table"></i>
           <span>Quick Bites</span></a>
       </li>
       
       <li class="nav-item">
-        <a class="nav-link" href="/groups/3">
+        <a class="nav-link" href="/group?group_id=3">
           <i class="fas fa-fw fa-table"></i>
           <span>Special Occasion</span></a>
       </li>
       
       <li class="nav-item">
-        <a class="nav-link" href="/groups/4">
+        <a class="nav-link" href="/group?group_id=4">
           <i class="fas fa-fw fa-table"></i>
           <span>Want to Try</span></a>
       </li>

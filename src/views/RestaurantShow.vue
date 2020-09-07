@@ -87,6 +87,7 @@ export default {
         restaurant_id: `${this.$route.query.restid}`,
         user_id: localStorage.getItem("jwt"),
         group_id: this.selected,
+        restaurant_name: this.restaurant.name,
       };
       axios.post("/api/usergroup", params).then((response) => {
         this.response = response.data;
