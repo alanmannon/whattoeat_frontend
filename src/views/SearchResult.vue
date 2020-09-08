@@ -2,7 +2,6 @@
   <div class="home">
     <div class="container">
     <h1 align="center">{{ message }}</h1>
-    {{userinfo.location}}
       <div v-for='restaurant in restaurants["restaurants"]'>
         <div class="card">
           <div class="card-header">

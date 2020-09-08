@@ -196,6 +196,7 @@
 
 </body>
   <div v-else>
+    
    <body>
    </body>
   <router-view/>

@@ -1,13 +1,26 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="We in here"/>
+    <h1>{{ message }}</h1>
   </div>
 </template>
 
+<style>
+</style>
+
 <script>
 export default {
-  name: "Home",
-  components: {},
+  data: function () {
+    return {
+      message: "THIS SHOULD CHANGE",
+    };
+  },
+  created: function () {
+    this.pushToLogin();
+  },
+  methods: {
+    pushToLogin: function () {
+      this.$router.push("/login");
+    },
+  },
 };
 </script>
