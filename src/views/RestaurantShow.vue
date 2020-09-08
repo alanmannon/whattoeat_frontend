@@ -7,6 +7,7 @@
       <h1>{{ restaurant.phone_numbers }}</h1>
       <h1>{{ restaurant.timings }}</h1>
       <h1>Price Range: {{ price_range }}</h1>
+      <h1><a v-bind:href='`${restaurant.menu_url}`'>Menu</a></h1>
         <select v-model="selected">
           <option v-for="group in group_ids" v-bind:value="group.value">
             {{ group.text }}

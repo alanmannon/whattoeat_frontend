@@ -9,14 +9,14 @@
             <div class="card-body">
               <h5 class="card-title">{{ group.restaurant_name }}</h5>
               <p class="card-text"></p>
-              <a v-bind:href='`/show?restid=${group.restaurant_id}`' class="btn btn-primary">More Info</a>
+              <a v-bind:href='`/show?restid=${group.restaurant_id}`' class="btn btn-primary">More Info</a> &nbsp;&nbsp;
               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" v-on:click="currentRestID(group.id)">
                 Delete
               </button>
             </div>
           </div>
         </div>
-      </div>
+      </div> 
       <!-- Modal -->
       <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -100,3 +100,35 @@ export default {
   },
 };
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="form-group col-md-4">
+      <label for="inputState">State</label>
+      <select id="inputState" class="form-control">
+        <option selected>Choose...</option>
+        <option>...</option>
+      </select>
+    </div>
+
+
+
+    <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>

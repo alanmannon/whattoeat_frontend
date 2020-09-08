@@ -27,9 +27,6 @@
           <span>Find Restaurants</span></a>
       </li>
 
-
-
-
    
       <!-- Divider -->
       <hr class="sidebar-divider">
@@ -262,7 +259,9 @@ export default {
     },
     searchZomato: function () {
       console.log(this.search);
-      this.$router.push(`/results?search=${this.search}`);
+      this.$router.push(
+        `/results?location=${this.response.location}&search=${this.search}`
+      );
     },
   },
 };

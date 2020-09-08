@@ -15,9 +15,15 @@
                 <div class="form-group">
                   <input type="text" class="form-control form-control-user" v-model="username" placeholder="Username">
                 </div>
-                <div class="form-group">
+                <div class="form-group row">
+                  <div class="col-sm-6 mb-3 mb-sm-0">
                     <input type="text" class="form-control form-control-user" v-model="city_name" placeholder="City Name">
                   </div>
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                    <input type="text" class="form-control form-control-user" v-model="state_code" placeholder="State (i.e. IL, NY)">
+                  </div>
+                   
+                </div>
                 <div class="form-group">
                   <input type="email" class="form-control form-control-user" v-model="email" placeholder="Email Address">
                 </div>
@@ -43,36 +49,6 @@
 
   </div>
   
-  
-  <!-- <div class="signup">
-    <form v-on:submit.prevent="submit()">
-      <h1>Signup</h1>
-      <ul>
-        <li class="text-danger" v-for="error in errors">{{ error }}</li>
-      </ul>
-      <div class="form-group">
-        <label>Username:</label> 
-        <input type="text" class="form-control" v-model="username">
-      </div>
-      <div class="form-group">
-        <label>Email:</label>
-        <input type="email" class="form-control" v-model="email">
-      </div>
-      <div class="form-group">
-        <label>Password:</label>
-        <input type="password" class="form-control" v-model="password">
-      </div>
-      <div class="form-group">
-        <label>Password confirmation:</label>
-        <input type="password" class="form-control" v-model="passwordConfirmation">
-      </div>
-      <div class="form-group">
-        <label>location:</label> 
-        <input type="text" class="form-control" v-model="city_name">
-      </div>
-      <input type="submit" class="btn btn-primary" value="Submit">
-    </form>
-  </div> -->
 </template> 
 
 <script>

@@ -5,7 +5,6 @@ import RestaurantIndex from '../views/RestaurantIndex.vue';
 import Login from '../views/Login.vue';
 import Logout from '../views/Logout.vue';
 import Signup from '../views/Signup.vue';
-import Usergroup from '../views/Usergroup.vue';
 import RestaurantShow from '../views/RestaurantShow.vue';
 import RestaurantRoll from '../views/RestaurantRoll.vue';
 import GroupShow from '../views/GroupShow.vue';
